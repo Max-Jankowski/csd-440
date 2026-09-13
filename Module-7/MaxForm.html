@@ -1,0 +1,82 @@
+<!--
+Max Jankowski 
+Bellevue University
+CSD440 Module 7 form file 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max's Data Entry Form</title>
+    <style>
+	<!-- Very simple style to make it look more professional. Not catchy, just professional-->
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            padding: 6px;
+            width: 250px;
+            margin-top: 4px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            width: auto;
+            padding: 8px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Customer Information Form</h1>
+
+<!--
+	Simple html form that collects 5 input types. text, email, number, date, tel, select, and text area for the comments. 
+	the data is sent to a request body, not the url via 'method="post"'
+	The 'action' points towards the response php that will validate the input and provide feedback in the form of failed or summerized 
+-->
+<form method="post" action="MaxResponse.php">
+
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+
+    <label for="birthdate">Birth Date:</label>
+    <input type="date" id="birthdate" name="birthdate">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="555-123-4567">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="">-- Select --</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>        
+    </select>
+
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <input type="submit" value="Submit Form">
+
+</form>
+
+</body>
+</html>
+
+<!--
+https://www.youtube.com/watch?v=7Wlp0iYUVr4&t=336s
+https://board.phpbuilder.com/d/10256326-using-a-calendar-as-form-input/2
+https://talent500.com/blog/data-collection-with-php-creating-forms-setting-up-and-validation/
+
+-->
