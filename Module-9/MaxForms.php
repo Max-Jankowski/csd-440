@@ -1,8 +1,14 @@
+<!--
+Max Jankowski 
+Bellevue University
+CSD-440 Module 9
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Max's Add Record Form</title>
-    <style>
+    <style> <!--Like every other php file, im including the in file style to prevent sending a seperate css--> 
         body {
             font-family: Arial, sans-serif;
             margin: 30px;
